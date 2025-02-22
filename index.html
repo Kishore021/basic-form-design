@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="hello.js" defer></script>
+<link rel="stylesheet" type="text/css" href="hello.css">
+
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+        <form id="registrationForm">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fatherName">Father's Name:</label>
+                <input type="text" id="fatherName" placeholder="Enter father’s name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your address">
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="Male" id="male"><label for="male">Male</label>
+                    <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State / Union Territory:</label>
+                <select id="state" onchange="updateDistricts()">
+                    <option value="">Select State or UT...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select id="district">
+                    <option value="">Select District...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" max="">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" placeholder="Enter 10-digit mobile number">
+            </div>
+
+            <div class="button-group">
+                <button type="reset" class="reset-button">Reset</button>
+                <button type="button" class="submit-button" onclick="handleSubmit()">Submit</button>
+            </div>
+
+            <p id="message"></p>
+        </form>
+    </div>
+
+</body>
+</html>
